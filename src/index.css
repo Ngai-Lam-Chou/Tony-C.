@@ -1,0 +1,62 @@
+
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.swing-once {
+    display: inline-block; /* Ensure it behaves like a block */
+    animation: swing 1.5s forwards; /* Apply the swing animation */
+}
+
+html{
+    overscroll-behavior: none;
+}
+
+/* styles.css */
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
